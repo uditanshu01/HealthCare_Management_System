@@ -1,0 +1,35 @@
+import { Router } from "express";
+import specializationRoute from "./specialization.route";
+import healthRoute from "./health.route";
+import authRoute from "./auth.route";
+import doctorRoute from "./doctor.route";
+import workingHourRoute from "./working-hour.route";
+import doctorLeaveRoute from "./doctor-leave.route";
+import appointmentRoute from "./appointment.route";
+import slotRoute from "./slot.route";
+import slotHoldRoute from "./slot-hold.route";
+import symptomRoute from "./symptom.route";
+import medicalNoteRoute from "./medical-note.route";
+import prescriptionRoute from "./prescription.route";
+import reminderRoute from "./reminder.route";
+import notificationRoute from "./notification.route";
+import calendarRoute from "./calendar.route";
+const router = Router();
+
+router.use("/", healthRoute);
+router.use("/specializations", specializationRoute);
+router.use("/auth", authRoute);
+router.use("/doctors", doctorRoute);
+router.use("/working-hours", workingHourRoute);
+router.use("/doctor-leaves", doctorLeaveRoute);
+router.use("/appointments", appointmentRoute);
+router.use("/slots", slotRoute);
+router.use("/slot-holds", slotHoldRoute);
+router.use("/symptoms", symptomRoute);
+router.use("/medical-notes", medicalNoteRoute);
+router.use("/prescriptions", prescriptionRoute);
+router.use("/reminders", reminderRoute);
+router.use("/notifications", notificationRoute);
+router.use("/calendar-events", calendarRoute);
+
+export default router;
